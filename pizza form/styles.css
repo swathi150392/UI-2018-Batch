@@ -1,0 +1,214 @@
+/*Styles for body and a transition animation*/
+body{
+    background: url("pizzabackground.jpg");
+    background-size: 100%;
+    background-repeat: repeat-y;
+    -webkit-transition: background-position 1s ease-out;
+    -moz-transition: background-position 1s ease-out;
+    -o-transition: background-position 1s ease-out;
+    -ms-transition: background-position 1s ease-out;
+    transition: background-position 1s ease-out;
+}
+
+body:hover{
+    background-position: 50px 0;
+}
+
+/*Styles for p tag */
+section > p{
+    position: absolute;
+    opacity: 0;
+}
+
+body:hover section > p{
+    position: absolute;
+    opacity: 1;
+    width: 0%;
+    word-break: break-all;
+    top: 9%;
+    left: 18px;
+    color: #661685;
+    font-size: 20px;
+}
+
+/*Styles for Form*/
+form[name="pizzaForm"]{
+    border: 2px solid #000;
+    position: relative;
+    top: 50px;
+    padding: 10px 15px;
+    width: 40%;
+    margin: 0% 18%;
+}
+
+/*Styles for pizza selection information in form*/
+#pizzaSelect{
+    padding-bottom: 8px;
+}
+
+.break{
+    border-bottom: 1px solid #000;
+    position: absolute;
+    margin: 0 -15px;
+}
+
+/*Styles for personal information in form*/
+.imgSide{
+    display:inline-block;
+}
+
+#personImg{
+    background-image: url("personlogo.png");
+    background-position: 9px -2px;
+    background-repeat: no-repeat;
+    background-size: 115px;
+    padding-top: 120px;
+}
+
+#rightPerson{
+    display: inline-block;
+    margin-left: 4%;
+    padding: 10px 0;
+}
+
+/*Styles for payment information in form*/
+#leftcard{
+    padding: 10px 0;
+    display: inline-block;
+}
+
+#cardImg{
+    background-image: url("card.jpg");
+    background-position: -2px 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 122px 32px 0;
+}
+
+/*Styles for buttons*/
+#btnSubmit, #btnReset{
+    border: 1px none;
+    padding: 6px 10px;
+    border-radius: 13px;
+    margin: 0 10%;
+}
+
+#btnSubmit{
+    background-color: #78bb2d;
+}
+
+#btnReset{
+    background-color: #f43406;
+}
+
+#btnSubmit:hover{
+    background-color: #f19731;
+    border: 2px solid #000;
+}
+
+#btnReset:hover{
+    border: 2px solid #000;
+}
+
+#btnSubmit, #btnReset{
+    box-shadow: 0 5px #666;
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -o-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+}
+
+/*Styles for the Header and Footer*/
+#mainHeader > nav > ul li{
+    list-style-type:none;
+    display:inline;
+}
+
+#mainHeader > nav > ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 2px 20px;
+}
+
+#mainHeader,#mainFooter{
+    background-color: #f19731;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#mainHeader{
+    top: 0;
+    /*height: 40px;*/
+}
+
+#mainFooter{
+    bottom: 0;
+    height: 30px;
+}
+
+#mainFooter > p{
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    height: 20px;
+    -webkit-animation: rightToLeft 10s linear infinite;
+    -moz-animation: rightToLeft 10s linear infinite;
+    -o-animation: rightToLeft 10s linear infinite;
+    -ms-animation: rightToLeft 10s linear infinite;
+    animation: rightToLeft 10s linear infinite;
+}
+
+/*Styles for the logo in the header*/
+.mainLogo{
+    background: url("logo.jpg");
+    padding: 20px 35px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 48%;
+}
+
+/*Styles for input and label fields*/
+form[name="pizzaForm"] div div{
+    position: relative;
+}
+
+input, select,
+input:focus, select:focus{
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #f7c790;
+    outline: none;
+    padding: 0 5px;
+}
+
+input + label{
+    position: absolute;
+    top: 3px;
+    left: 8px;
+}
+
+input:focus + label,
+input:valid + label{
+    position: absolute;
+    left: 188px;
+    width: 110px;
+}
+
+#toppings{
+    height: 70px;
+}
+
+/*Animation in the footer*/
+@keyframes rightToLeft{
+    0%{
+        width: 1%;
+        overflow: hidden;
+    }
+    100%{
+        width: 140%;
+        overflow: hidden;
+    }
+}

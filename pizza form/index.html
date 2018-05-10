@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head of the Pizza page-->
+<head>
+    <!--Title of the page-->
+    <title>Pizza Order Form</title>
+
+    <!--Links to external CSS stylesheets-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="icon" type="image" href="logo.jpg">
+
+    <!--Meta tag for responsiveness of the page-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!--Content of the page is covered in the body section-->
+<body>
+    <article>
+        <!--Header of the webpage-->
+        <header id="mainHeader">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Logon</a>
+                    </li>
+                    <li>
+                        <a href="">Register</a>
+                    </li>
+                    <li>
+                        <a href="">Track Order</a>
+                    </li>
+                    <li class="mainLogo">
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Main content of the page-->
+        <section>
+            <p>WELCOME &nbsp TO &nbsp OUR &nbsp WEBSITE</p>
+
+            <!--Pizza form of the webpage-->
+            <form name="pizzaForm">
+                <!--Div for pizza selection information of the form-->
+                <div class="row">
+                    <div class="col-7 col-md-12 col-sm-12" id="pizzaSelect">
+                        <div>
+                            <label for="pizza">Pizza Type</label>
+                            <select name="pizza" id="pizza">
+                                <option selected disabled>Select any pizza</option>
+                                <option value="vegPizza">Veg Pizza</option>
+                                <option value="buffaloChickenPizza">Buffalo Chicken Pizza</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="size">Select a size</label>
+                            <select name="size" id="size">
+                                <option selected disabled>Pick below</option>
+                                <option value="quarter">Quarter</option>
+                                <option value="half">Half</option>
+                                <option value="full">Full</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="toppings">Add Toppings for Free</label>
+                            <select name="toppings" id="toppings" multiple>
+                                <option selected disabled>Add below</option>
+                                <option value="Tomato">Tomato</option>
+                                <option value="Jalapeno">Jalapeno</option>
+                                <option value="Onions">Onions</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="break col-12"></div>
+
+                <!--Div for Personal information of the form-->
+                <div class="row">
+                    <div class="imgSide col-3 col-md-4 col-sm-12">
+                        <p id="personImg">Personal Information</p>
+                    </div>
+                    <div id="rightPerson" class="col-5 col-md-7 col-sm-12">
+                        <div>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="email" id="emailAddress" name="emailAddress" required>
+                            <label for="emailAddress">Email Address</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" id="phoneNumber" name="phoneNumber" required>
+                            <label for="phoneNumber">Phone Number#</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="break col-12"></div>
+
+                <!--Div for Payment information for the order-->
+                <div class="row">
+                    <div class="col-7 col-md-8 col-sm-12" id="leftcard">
+                        <div>
+                            <label for="card">Payment Options</label>
+                            <select name="card" id="card">
+                                <option selected disabled>Select Card Type</option>
+                                <option value="creditCard">Credit Card</option>
+                                <option value="debitCard">Debit Card</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" id="cardNumber" name="cardNumber" required>
+                            <label for="cardNumber">Card Number</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" id="nameOnCard" name="nameOnCard" required>
+                            <label for="nameOnCard">Name on Card</label>
+                        </div>
+                        <br>
+                        <div>
+                            <label >Expiration</label>
+                            <select name="expirationMonth">
+                                <option selected disabled>Select Month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                            <select name="expirationYear">
+                                <option selected disabled>Select Year</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-3 col-sm-6 imgSide">
+                        <p id="cardImg">Payment Info</p>
+                    </div>
+                </div>
+
+                <!--Buttons for the form-->
+                <div class="row">
+                    <button class="col-3 col-sm-4" type="submit" id="btnSubmit">Confirm Order</button>
+                    <!--<div class="col-6 imgSide"></div>-->
+                    <button class="col-2 col-sm-3" type="submit" id="btnReset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!--Footer of the webpage-->
+        <footer id="mainFooter">
+            <p>***Store timings are 10AM to 11:59PM Whole Week. Please contact us for further details.</p>
+        </footer>
+    </article>
+</body>
+</html>
