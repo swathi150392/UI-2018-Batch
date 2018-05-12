@@ -21,4 +21,31 @@ col-md -- medium screens
 
 col-lg -- large screens
 
+<kbd>
+
+.text-muted, .text-primary, .text-success, .text-info, .text-warning, and .text-danger:
+
+.bg-primary, .bg-success, .bg-info, .bg-warning, and .bg-danger:
+
+.table
+
+.table-striped
+
+.table-bordered
+
+.img-rounded
+
+.img-circle
+.img-responsive
+
+
+  .btn
+.btn-default
+.btn-primary
+.btn-success
+.btn-info
+.btn-warning
+.btn-danger
+.btn-link
+
  
