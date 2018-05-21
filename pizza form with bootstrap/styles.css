@@ -1,0 +1,146 @@
+/*Styles for body tag*/
+body{
+    background: url("pizzabackground.jpg");
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+/*Styles for header and footer*/
+#mainHeader,#mainFooter{
+    background-color: #f19731;
+}
+
+/*Styles for the logo in the header*/
+.mainLogo{
+    background: url("logo.jpg");
+    padding: 25px 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.nav-item > a.nav-link:hover,
+.nav-item > a.nav-link:active{
+    color:#421f14 !important;
+    font-size: large;
+}
+
+li:hover > div.dropdown-menu {
+    display: block;
+}
+
+li.hoverNav > div.dropdown-menu {
+    padding:0 0;
+}
+
+.dropdown-menu > a.dropdown-item:hover,
+.dropdown-menu > a.dropdown-item:focus{
+    background-color: #763824;
+    color: #fff;
+}
+
+.dropdownFormPadding{
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+a h3 span.fa-shopping-cart{
+    margin-right:1rem;
+}
+
+#mainFooter{
+    height: 40px;
+}
+
+#mainFooter > .navbar-text{
+    position: absolute;
+    right: 0px;
+    height: 35px;
+    -webkit-animation: rightToLeft 10s linear infinite;
+    -moz-animation: rightToLeft 10s linear infinite;
+    -o-animation: rightToLeft 10s linear infinite;
+    -ms-animation: rightToLeft 10s linear infinite;
+    animation: rightToLeft 10s linear infinite;
+}
+
+/*Animation in the footer*/
+@keyframes rightToLeft{
+    0%{
+        width: 1%;
+        overflow: hidden;
+    }
+    100%{
+        width: 140%;
+        overflow: hidden;
+    }
+}
+
+/*Styles for body carousel row of home page*/
+#firstRow{
+    margin-top: 2%;
+}
+
+.carousel-indicators li{
+    padding: 7px !important;
+    border-radius: 11px !important;
+    width: 3px !important;
+}
+
+.card-deck{
+    margin: 5% 0;
+}
+
+.collapse > div.card-header{
+    text-align: center;
+    color: #fff;
+    background-color: #e7a962;
+}
+
+/*Styles for order breadcrumb*/
+ul.breadcrumb li + li::before{
+    content: "/\00a0";
+}
+
+/*Styles for order process forms*/
+#personImg{
+    background-image: url("personlogo.png");
+    background-position: 9px -2px;
+    background-repeat: no-repeat;
+    background-size: 115px;
+    padding-top: 120px;
+}
+
+#cardImg{
+    background-image: url("card.jpg");
+    background-position: -2px 0px;
+    background-size: 115px;
+    background-repeat: no-repeat;
+    padding-top: 90px;
+}
+
+#btnSubmit:hover{
+    background-color: #f19731;
+    border: 2px solid #000;
+}
+
+#btnReset:hover{
+    border: 2px solid #000;
+}
+
+#btnSubmit, #btnReset{
+    box-shadow: 0 5px #666;
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -o-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+}
+
+form > h6{
+    position: absolute;
+    top: -11px;
+    left: 30%;
+    background-color: #f6e9d0;
+    padding: 0 4px;
+    margin: 0;
+}
+

@@ -1,0 +1,215 @@
+/*Applying styles suitable for Tablets, Ipads (portrait)*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    form[name="pizzaForm"]{
+        width: 65%;
+        margin: 15% 6%;
+    }
+
+    .col-md-1{
+        width: 8.33%;
+    }
+
+    .col-md-2{
+        width: 16.67%;
+    }
+
+    .col-md-3{
+        width: 25%;
+    }
+
+    .col-md-4{
+        width: 33.33%;
+    }
+
+    .col-md-5{
+        width: 41.67%;
+    }
+
+    .col-md-6{
+        width: 50%;
+    }
+
+    .col-md-7{
+        width: 58.33%;
+    }
+
+     .col-md-8{
+         width: 66.67%;
+     }
+
+    .col-md-9{
+        width: 75%;
+    }
+
+    .col-md-10{
+        width: 83.33%;
+    }
+
+    .col-md-11{
+        width: 91.67%;
+    }
+
+    .col-md-12{
+        width: 100%;
+    }
+
+    .mainLogo{
+        margin-left: 24%;
+    }
+}
+
+/*Applying styles suitable for Tablets, Ipads (landscape)*/
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape){
+    form[name="pizzaForm"]{
+        width: 50%;
+        margin: 0% 5%;
+    }
+
+    .col-md-1{
+        width: 8.33%;
+    }
+
+    .col-md-2{
+        width: 16.67%;
+    }
+
+    .col-md-3{
+        width: 25%;
+    }
+
+    .col-md-4{
+        width: 33.33%;
+    }
+
+    .col-md-5{
+        width: 41.67%;
+    }
+
+    .col-md-6{
+        width: 50%;
+    }
+
+    .col-md-7{
+        width: 58.33%;
+    }
+
+     .col-md-8{
+         width: 66.67%;
+     }
+
+    .col-md-9{
+        width: 75%;
+    }
+
+    .col-md-10{
+        width: 83.33%;
+    }
+
+    .col-md-11{
+        width: 91.67%;
+    }
+
+    .col-md-12{
+        width: 100%;
+    }
+
+    .mainLogo{
+        margin-left: 44%;
+    }
+}
+
+
+/*Applying styles suitable for Mobiles(Portrait)*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait){
+    form[name="pizzaForm"]{
+        width: 90%;
+        margin: 16% 9%;
+    }
+
+    .col-sm-3{
+        width: 25%;
+    }
+
+    .col-sm-4{
+        width: 32.33%;
+    }
+
+    .col-sm-6{
+        width: 50%;
+    }
+
+    .col-sm-7{
+        width: 58.33%;
+    }
+
+    .col-sm-12{
+        width: 100%;
+    }
+
+    input{
+        width: 50%;
+    }
+
+    input:focus + label,
+    input:valid + label{
+        left: 55%;
+    }
+
+    #mainHeader > nav > ul li:nth-child(2), #mainHeader > nav > ul li:nth-child(3), #mainHeader > nav > ul li:nth-child(4){
+        display: none;
+    }
+
+    .mainLogo{
+        margin-left: 13%;
+    }
+
+    @keyframes rightToLeft{
+        0%{
+            width: 1%;
+            overflow: hidden;
+        }
+        100%{
+            width: 245%;
+            overflow: hidden;
+        }
+    }
+}
+
+/*Applying styles suitable for Mobiles(Landscape)*/
+
+@media only screen and (min-width: 568px) and (max-width: 823px) and (orientation: landscape){
+    form[name="pizzaForm"]{
+        width: 80%;
+        margin: 10% 6%;
+    }
+
+    #cardImg{
+        background-size: 49%;
+    }
+
+    .col-sm-3{
+        width: 25%;
+    }
+
+    .col-sm-4{
+        width: 32.33%;
+    }
+
+    .col-sm-6{
+        width: 50%;
+    }
+
+    .col-sm-7{
+        width: 58.33%;
+    }
+
+    .col-sm-12{
+        width: 100%;
+    }
+
+    .mainLogo{
+        padding: 11px 24px;
+        margin-left: 0%;
+    }
+}

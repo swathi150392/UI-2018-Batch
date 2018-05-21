@@ -1,0 +1,378 @@
+<!--Home Page of the Pizza store-->
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head of the Pizza page-->
+    <head>
+        <!--Title of the page-->
+        <title>Pizza Menu Page</title>
+
+        <!--Meta tag for responsiveness of the page-->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <meta name="viewport" content="width = device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!--Links to external CSS stylesheets-->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image" href="logo.jpg">
+        <!--Bootstrap CSS-->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </head>
+
+    <!--Content of the page is covered in the body section-->
+    <body>
+        <article>
+            <!--Header of the webpage-->
+            <header id="mainHeader" class="sticky-top">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="mainLogo" href="index.html"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Track Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#contactModal">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Click here for store location" >Contact</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogonLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Logon
+                                </a>
+                                <div class="dropdown-menu dropdownFormPadding" aria-labelledby="navbarDropdownLogonLink">
+                                    <form style="width:250px !important;">
+                                        <div class="form-group">
+                                            <label for="inputEmail">Email Address</label>
+                                            <input type="email" class="form-control" id="inputEmail">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword">Password</label>
+                                            <input type="email" class="form-control" id="inputPassword">
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                            <label class="form-check-label" for="dropdownCheck">
+                                                Remember me
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Logon</button>
+                                        <div class="form-group">
+                                            <small class="form-text text-muted">Don't have an account?</small>
+                                            <a href="#navbarDropdownRegisterLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRegisterLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Register
+                                </a>
+                                <div class="dropdown-menu dropdownFormPadding" aria-labelledby="navbarDropdownRegisterLink">
+                                    <form style="width:250px !important;">
+                                        <div class="form-group">
+                                            <label for="inputFirstName"> First Name</label>
+                                            <input type="text" class="form-control" id="inputFirstName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputLastName"> Last Name</label>
+                                            <input type="text" class="form-control" id="inputLastName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="newEmail">Email Address</label>
+                                            <input type="email" class="form-control" id="newEmail">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="newPassword">Password</label>
+                                            <input type="email" class="form-control" id="newPassword">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputConfirmPassword"> Confirm Password</label>
+                                            <input type="email" class="form-control" id="inputConfirmPassword">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary">Register Now</button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="form-inline">
+                            <a type="link" class="text-dark" href="#" title="Edit your Order">
+                                <span class="fa fa-shopping-cart fa-2x">$0.00</span>
+                            </a>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Enter a promo code" aria-label="Search">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#couponModal">
+                                Apply
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+            <!--Modal for contact of pizza store-->
+            <div class="container">
+                <div class="modal" id="contactModal" role="dialog" aria-hidden="true" aria-labelledby="navbar-modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Store Location</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6>Address</h6>
+                                        <p>1600 W University Drive,<br> Denton TX - 76205</p>
+                                        <h6>Phone Number</h6>
+                                        <p>940-555-1234</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6>Store Hours</h6>
+                                        <p>10:00AM to 9:00PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">CLose</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Main content of the page-->
+            <section>
+                <!--Pagination for menu items of the store-->
+                <div class="row">
+                    <div class="col-sm-10 col-12">
+                        <nav aria-label="Menu Navigation items">
+                        <ul class="pagination justify-content-center pagination-sm pagination-responsive">
+                            <li class="page-item">
+                                <a class="page-link" data-toggle="collapse" href="#collapseMenuPizza" role="button" aria-expanded="false" aria-controls="collapseMenuPizza">
+                                    Pizza
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" data-toggle="collapse" href="#collapseMenuPasta" role="button" aria-expanded="false" aria-controls="collapseMenuPasta">
+                                    Pasta
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" data-toggle="collapse" href="#collapseMenuWings" role="button" aria-expanded="false" aria-controls="collapseMenuWings">
+                                    Wings
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" data-toggle="collapse" href="#collapseMenuGarlic" role="button" aria-expanded="false" aria-controls="collapseMenuGarlic">
+                                    Garlic Bread
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" data-toggle="collapse" href="#collapseMenuSandwich" role="button" aria-expanded="false" aria-controls="collapseMenuSandwich">
+                                    Sandwiches
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" data-toggle="collapse" href="#collapseMenuDrink" role="button" aria-expanded="false" aria-controls="collapseMenuDrink">
+                                    Drinks
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="collapse" id="collapseMenuPizza">
+                            <div class="card-header">Pizza Items</div>
+                            <div class="card-deck text-center">
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuPizzaImgOne.jpg" alt="Veggie Pizza image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Veggie Pizza</h5>
+                                        <p class="card-text">vegetable Italian pizza with tomatoes, mozzarella and mixed herbs</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuPizzaImgTwo.jpg" alt="Chicken Pizza image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Chicken Pizza</h5>
+                                        <p class="card-text">Swap out red sauce for something zesty on this Grilled White Chicken Pizza!</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuPizzaImgThree.jpg" alt="Pepperoni Pizza image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Pizza Meal Deal</h5>
+                                        <p class="card-text">Hot Pepperoni Pizza Ready to Eat</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuPizzaImgFour.jpg" alt="Buffalo Chicken Pizza image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Buffalo Chicken Pizza</h5>
+                                        <p class="card-text">Shredded Buffalo Chicken with Mozzarella Cheese on Pizza Dough </p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseMenuPasta">
+                            <div class="card-header">Pasta Items</div>
+                            <div class="card-deck text-center">
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuPastaImgOne.jpg" alt="Alfredo Pizza Image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Alfredo Pizza</h5>
+                                        <p class="card-text">Low-Cal Fettuccine Alfredo Pasta</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuPastaImgTwo.jpg" alt="Chicken Pasta image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Chicken Pasta</h5>
+                                        <p class="card-text">Pasta Sauce with Chicken and Peppers</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuPastaImgThree.jpg" alt="Chicken and Bacon Pasta image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Chicken and Bacon Pasta</h5>
+                                        <p class="card-text">Chicken and Bacon Pasta with Spinach and Tomatoes in Garlic Cream Sauce</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseMenuWings">
+                            <div class="card-header">Wings Items</div>
+                            <div class="card-deck text-center">
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuWingsImgOne.jpg" alt="Baked Chicken Wings image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Chicken Wings</h5>
+                                        <p class="card-text">Crispy Baked Chicken Wings</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuWingsImgTwo.jpg" alt="Buffalo Chicken image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Buffalo Chicken Wings</h5>
+                                        <p class="card-text">Chicken Wings with Buffalo Sauce</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuWingsImgThree.jpg" alt="Fried Chicken Wings image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Fried Chicken Wings</h5>
+                                        <p class="card-text">Crispy and fried chicken wings</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseMenuGarlic">
+                            <div class="card-header">Garlic Bread Items</div>
+                            <div class="card-deck text-center">
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuGarlicImgOne.jpg" alt="Parmesan Garlic Bread Image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Parmesan Garlic Bread</h5>
+                                        <p class="card-text">Garlic Bread with Parmesan Cheese</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuGarlicImgTwo.jpg" alt="Frozen Garlic Bread Image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Frozen Garlic Bread</h5>
+                                        <p class="card-text">Texas Toast Frozen Garlic Bread</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseMenuSandwich">
+                            <div class="card-header">Sandwich Items</div>
+                            <div class="card-deck text-center">
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuSandwichImgOne.jpg" alt="Garlic Cheese Sandwich image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Garlic Cheese Sandwich</h5>
+                                        <p class="card-text">Sandwich with Garlic Cheese</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuSandwichImgTwo.jpg" alt="Grilled Toast Sandwich image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Toast Sandwich</h5>
+                                        <p class="card-text">Grilled Toast Sandwich</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuSandwichImgThree.jpg" alt="Grilled Tofu Spinach Sandwich image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Grilled Tofu Spinach Sandwich</h5>
+                                        <p class="card-text">Grilled Sandwich with Tofu and Spinach </p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseMenuDrink">
+                            <div class="card-header">Drink Items</div>
+                            <div class="card-deck text-center">
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuDrinkImgOne.jpg" alt="Drink Tins Image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Drink Tins</h5>
+                                        <p class="card-text">Choose your favourite drink</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuDrinkImgTwo.png" alt="Soft deink bottles image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Soft Drink Bottles</h5>
+                                        <p class="card-text">Choose your favourite bottle</p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary">
+                                    <img class="card-img-top" src="menuDrinkImgThree.jpg" alt="Refreshments image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">Refreshments</h5>
+                                        <p class="card-text">Select it and get refreshed </p>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    </div>
+                </div>
+            </section>
+
+            <!--Footer of the webpage-->
+            <footer id="mainFooter" class="fixed-bottom">
+                <div class="navbar-text">***Store timings are 10AM to 11:59PM Whole Week. Please contact us for further details.</div>
+            </footer>
+        </article>
+    </body>
+</html>

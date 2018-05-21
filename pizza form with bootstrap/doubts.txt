@@ -1,0 +1,2 @@
+1. How to adjust the height of carousel images? If we are adjusting by using max-height option, the carousel captions are moving out of place?
+2. Is it okay if we use fa instead of glyphycon? Is it suggestable?
