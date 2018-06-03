@@ -1,0 +1,117 @@
+<!--Home Page of the Calculator-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Find a number</title>
+
+        <!--Bootstrap CSS-->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <article>
+            <header></header>
+            <section>
+                <div class="container">
+                    <!--Armstrong number-->
+                    <div class="input-group w-75 mt-3 mb-3 mx-auto">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="armstrongNumber">Enter a number and check if it is Armstrong or not?</span>
+                        </div>
+                        <input type="text" class="form-control" id="numArmstrong" placeholder="Enter a Number" aria-label="Number" aria-describedby="armstrongNumber">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary" type="button" onclick="armstrongCheck()">Check</button>
+                        </div>
+                    </div>
+                    <!--Prime Number-->
+                    <div class="input-group w-75 mt-3 mb-3 mx-auto">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="primeNumber">Enter a number and check if it is Prime or not?</span>
+                        </div>
+                        <input type="text" class="form-control" id="numPrime" placeholder="Enter a Number" aria-label="Number" aria-describedby="primeNumber">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" type="button" onclick="primeCheck()">Check</button>
+                        </div>
+                    </div>
+                    <!--Fibonacci Series-->
+                    <div class="input-group w-75 mt-3 mb-3 mx-auto">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="fibNumber">Generate a fibonacci series till this number?</span>
+                        </div>
+                        <input type="text" class="form-control" id="numFib" placeholder="Enter a Number" aria-label="Number" aria-describedby="fibNumber">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-warning" type="button" onclick="fibCheck()">Check</button>
+                        </div>
+                    </div>
+                    <p id="outputFib" style = "text-align:center;"></p>
+                </div>
+            </section>
+            <footer></footer>
+        </article>
+        <script>
+            /*Function to check if number entered is armstrong number or not*/
+            function armstrongCheck(){
+                var input = document.getElementById('numArmstrong').value;
+                document.getElementById('numArmstrong').value = '';
+                var result = 0;
+
+                for ( var i = 0; i < input.length;i++){
+                    result = result + Math.pow(input[i], input.length);
+                }
+                if (input == result) {
+                    alert("Number you entered is an Armstrong Number");
+                }
+                else{
+                    alert("Number you entered is not an Armstrong Number");
+                }
+            }
+
+            /*Function to check if number entered is prime number or not*/
+            function primeCheck(){
+                var input = document.getElementById('numPrime').value;
+                document.getElementById('numPrime').value = '';
+
+                if (input == 2 || input == 3) {
+                    alert("Number you entered is a Prime Number");
+                }
+                else if (input == 1 || input == 4){
+                    alert("Number you entered is not a Prime Number");
+                }
+                var dev = input / 2;
+                 for(var i=2; i < dev ; i++){
+                    if(input%i == 0){
+                        alert("Number you entered is not a Prime Number");
+                        break;
+                    }
+                    else{
+                        alert("Number you entered is a Prime Number");
+                        break;
+                    }
+                 }
+            }
+
+            /*Function to display fibonacci series*/
+            function fibCheck() {
+                var input = document.getElementById('numFib').value;
+                document.getElementById('numFib').value = '';
+
+                var previous_first = 0, previous_second = 1, next = 1;
+                var result = "0";
+
+                while (next < input) {
+                    result = result + ', ' + next;
+                    next = previous_first + previous_second;
+                    previous_first = previous_second;
+                    previous_second = next;
+                }
+                document.getElementById("outputFib").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
